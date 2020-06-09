@@ -30,3 +30,26 @@ function judgeRepeatItem (arr) {
     }
     return natureSize;
   }
+
+/*
+  3.Use js to style dom elements
+*/
+
+// <!-- Use js to style dom elements -->
+function addClass(el, className){
+  // <!-- To determine whether dom already has className -->
+  if(hasClass(el,className)){
+      return
+  }
+  let newClass = el.className.split(' ')
+  newClass.push(className)
+  el.className = newClass.join(' ')
+}
+
+// <!-- Determine if there is a className -->
+function hasClass(el, className){
+  // <!--Create a regular -->
+  let reg = new RegExp('(^|\\s)'+className+'(\\s|$)')
+  return reg.test(el.className)
+  // <!-- Used to determine whether a string matches a certain pattern -->
+}
